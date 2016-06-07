@@ -69,8 +69,17 @@ app.get('/data.json', (req, res) => {
   });
 });
 
+// Our API for demos only
+app.get('/users', (req, res) => {
+  res.json([
+    'user1',
+    'user2',
+    'user3'
+  ]);
+});
+
 // Routes with html5pushstate
-app.use('/', ngApp);
+// app.use('/', ngApp);
 app.use('/about', ngApp);
 app.use('/home', ngApp);
 
